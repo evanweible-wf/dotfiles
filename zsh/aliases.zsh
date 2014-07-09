@@ -5,7 +5,7 @@ alias reload!='. ~/.zshrc'
 alias cl='clear'
 
 # workspaces
-alias dev='cd ~/dev/ekweible'
+alias dev='cd ~/dev/wf'
 alias devconf='cd ~/dev/config'
 
 # projects

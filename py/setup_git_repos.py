@@ -51,16 +51,27 @@ def add_git_remotes(workspace_path, repo):
         return
 
     for remote in repo['remotes']:
-        log.info(' - adding remote "%s" to %s' % (remote['name'], repo['name']))
-
         if not remote_exists(workspace_path, repo, remote):
+            log.info(' - adding remote "%s" to %s' % (remote['name'], repo['name']))
             repo_path = os.path.join(workspace_path, repo['name'])
             Process('git remote add %s %s && git fetch %s' % (remote['name'], remote['url'], remote['name']),
                     cwd=repo_path,
                     exit_on_fail=True).run()
             log.success(' - remote "%s" added to %s' % (remote['name'], repo['name']))
-        else:
-            log.success(' - remote "%s" already exists in %s' % (remote['name'], repo['name']))
+
+
+def configure_git_repo(workspace_path, repo):
+    if 'gitconfig' not in repo:
+        return
+
+    repo_path = os.path.join(workspace_path, repo['name'])
+
+    for key, value in repo['gitconfig'].iteritems():
+        current_value = Process('git config %s' % key, cwd=repo_path, exit_on_fail=False).run().stdout.strip()
+        if current_value != value:
+            log.info(' - setting %s to "%s"' % (key, value))
+            Process('git config %s "%s"' % (key, value), cwd=repo_path, exit_on_fail=True).run()
+            log.success(' - %s set to "%s"' % (key, value))
 
 
 def setup_git_workspace(workspace):
@@ -71,9 +82,10 @@ def setup_git_workspace(workspace):
         if not repo_exists(workspace['path'], repo):
             setup_git_repo(workspace['path'], repo)
         else:
-            log.success('%s repo already exists' % repo['name'])
+            log.success('%s %s' % (u'\u2713', repo['name']))
 
         add_git_remotes(workspace['path'], repo)
+        configure_git_repo(workspace['path'], repo)
 
 
 def run():

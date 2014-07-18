@@ -6,7 +6,8 @@ alias cl='clear'
 
 # workspaces
 alias dev='cd ~/dev/wf'
-alias devconf='cd ~/dev/config'
+alias devc='cd ~/dev/config'
+alias devp='cd ~/dev/ekweible'
 
 # projects
 alias alfred='cd ~/dev/ekweible/alfred-workflows'

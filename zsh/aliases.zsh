@@ -11,6 +11,7 @@ alias devp='cd ~/dev/ekweible'
 
 # projects
 alias alfred='cd ~/dev/ekweible/alfred-workflows'
+alias class='cd ~/dev/ekweible/class'
 alias dotfiles='cd ~/dev/config/dotfiles'
 alias ekw='cd ~/dev/ekweible/ekweible.github.io'
 alias jspubsub='cd ~/dev/wf/w-js-pubsub'
@@ -37,3 +38,6 @@ alias cd="venv_cd"
 function run() {
     python ~/dev/ekweible/scripts/runserver.py "`pwd`" "$@"
 }
+
+# bigsky aliases
+alias erasereset='sky && python tools/erase_reset_data.py --admin=evan.weible@workiva.com --password=n'

@@ -12,18 +12,9 @@ alias devp='cd ~/dev/ekweible'
 alias devs='cd ~/dev/sandbox'
 
 # projects
-alias alfred='cd ~/dev/ekweible/alfred-workflows'
-alias class='cd ~/dev/ekweible/class'
 alias dotfiles='cd ~/dev/config/dotfiles'
-alias ekw='cd ~/dev/ekweible/ekweible.github.io'
-alias jspubsub='cd ~/dev/wf/w-js-pubsub'
-alias portfolio='ekw'
-alias ra='cd ~/dev/wf/richapps'
 alias secrets='cd ~/dev/config/secrets'
-alias sky='cd ~/dev/wf/bigsky'
-alias spike='cd ~/dev/wf/wf-js-app-shell-spike'
-alias wallboard='cd ~/dev/ekweible/wallboard.me'
-alias wb='cd ~/dev/wf/web-bones'
+alias sky='cd ~/dev/workiva/other/bigsky'
 
 # check for virtualenv upon entering directories
 has_virtualenv() {

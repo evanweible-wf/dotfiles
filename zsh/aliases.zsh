@@ -9,6 +9,7 @@ alias dev='cd ~/dev/'
 alias devw='cd ~/dev/workiva/cp'
 alias devc='cd ~/dev/config'
 alias devp='cd ~/dev/ekweible'
+alias devs='cd ~/dev/sandbox'
 
 # projects
 alias alfred='cd ~/dev/ekweible/alfred-workflows'

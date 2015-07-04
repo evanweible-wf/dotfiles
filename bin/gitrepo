@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# gitrepo
+#
+# `gitrepo` is a cli for adding/configuring git repos and remotes
+sh $ZSH/git/configure_repos.sh

@@ -3,7 +3,7 @@
 source $ZSH/scripts/includes.sh
 
 setup_git_repos () {
-    user "- do you want to setup your git repositories? (Y/n)"
+    user "- do you want to download/update your git repositories? (Y/n)"
     read -n 1 action
     br
     if [ "$action" == 'n' ]

@@ -28,9 +28,10 @@ venv_cd () {
 alias cd="venv_cd"
 
 # gae aliases
-function run() {
-    python ~/dev/ekweible/scripts/runserver.py "`pwd`" "$@"
-}
+# function run() {
+#    python ~/dev/ekweible/scripts/runserver.py "`pwd`" "$@"
+# }
 
 # bigsky aliases
+alias runserver='python ~/dev/workiva/other/scripts/runserver.py'
 alias erasereset='sky && python tools/erase_reset_data.py --admin=evan.weible@workiva.com --password=n'

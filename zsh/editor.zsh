@@ -1,1 +1,1 @@
-export EDITOR='/usr/local/bin/charm'
+export EDITOR='/usr/local/bin/wstorm'
